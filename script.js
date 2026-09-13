@@ -1,10 +1,15 @@
 const header = document.querySelector('[data-header]');
+const hero = document.querySelector('.hero');
 const year = document.querySelector('[data-year]');
 year.textContent = new Date().getFullYear();
 
-const updateHeader = () => header.classList.toggle('scrolled', window.scrollY > 24);
+const updateHeader = () => {
+  const heroBottom = hero.getBoundingClientRect().bottom;
+  header.classList.toggle('scrolled', heroBottom <= header.offsetHeight);
+};
 updateHeader();
 window.addEventListener('scroll', updateHeader, { passive: true });
+window.addEventListener('resize', updateHeader, { passive: true });
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (reducedMotion || !('IntersectionObserver' in window)) {
