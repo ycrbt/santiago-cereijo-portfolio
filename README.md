@@ -2,6 +2,8 @@
 
 A fast, accessible, responsive engineering portfolio focused on measurable outcomes and production impact.
 
+**Live site:** [santiago-cereijo-portfolio.pages.dev](https://santiago-cereijo-portfolio.pages.dev)
+
 ## Local preview
 
 ```bash
