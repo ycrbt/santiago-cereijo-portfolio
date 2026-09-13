@@ -19,6 +19,9 @@ npm run build
 
 The build emits a self-contained Cloudflare Worker module at `dist/worker.js`.
 
+Cloudflare Pages runs `npm run build:pages` and publishes `dist-pages/` on every
+push to `main`. Pull requests receive preview deployments.
+
 ## Design decisions
 
 - Outcome-first content hierarchy for recruiter scanning.
