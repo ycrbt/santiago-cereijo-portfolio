@@ -53,7 +53,7 @@ nav a:hover, .social-links a:hover { color: var(--lime); }
 .eyebrow, .section-index, .metric-kicker, .timeline-date, .case-result span { font: 500 .7rem "DM Mono"; letter-spacing: .14em; text-transform: uppercase; }
 .eyebrow { color: #bfcec9; display: flex; align-items: center; gap: .7rem; margin-bottom: 1.9rem; }
 .status-dot { width: 7px; height: 7px; background: var(--lime); border-radius: 50%; box-shadow: 0 0 0 6px rgba(184,255,91,.1); }
-h1 { margin: 0; font-size: clamp(3.6rem, 9vw, 8.5rem); line-height: .86; letter-spacing: -.07em; font-weight: 600; max-width: 1050px; }
+h1 { margin: 0; font-size: clamp(3.6rem, 9vw, 8.5rem); line-height: 1; letter-spacing: -.07em; font-weight: 600; max-width: 1050px; }
 h1 span { color: var(--lime); }
 .hero-intro { max-width: 680px; color: #b8c9c3; font-size: clamp(1rem, 1.6vw, 1.25rem); line-height: 1.75; margin: 2rem 0; }
 .hero-actions { display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap; }
@@ -71,9 +71,9 @@ h1 span { color: var(--lime); }
 .profile-link:focus-visible { outline: 2px solid var(--lime); outline-offset: -3px; }
 
 .hero-proof { grid-column: 1 / -1; align-self: end; display: flex; align-items: center; gap: 1.25rem; color: var(--muted); font: .69rem "DM Mono"; letter-spacing: .04em; position: relative; z-index: 2; }
-.amazon-logo-frame { display: inline-flex; align-items: center; justify-content: center; padding: .38rem .55rem; border-radius: 4px; background: #fff; box-shadow: 0 0 0 1px rgba(255,255,255,.12); }
-.amazon-logo { display: block; width: 88px; height: auto; }
-.proof-divider { width: 1px; height: 20px; background: var(--line); }
+.amazon-logo-frame { position: relative; display: inline-flex; width: 104px; transform: translateY(3px); }
+.amazon-logo-frame::after { content: ""; position: absolute; inset: 0; background: var(--ink); -webkit-mask: url("/assets/amazon-logo.png") center / contain no-repeat; mask: url("/assets/amazon-logo.png") center / contain no-repeat; clip-path: inset(0 0 46%); pointer-events: none; }
+.amazon-logo { display: block; width: 100%; height: auto; }
 
 .section { max-width: var(--max); margin: 0 auto; padding: clamp(6rem, 11vw, 10rem) 0; }
 .section-heading { display: grid; grid-template-columns: 1fr 2.2fr; column-gap: 3rem; margin-bottom: 4rem; align-items: start; }
@@ -174,7 +174,7 @@ footer { max-width: var(--max); margin: auto; padding: 2rem 0; display: flex; ju
   .site-header { height: 64px; padding: 0 1rem; }
   .brand { font-size: .72rem; max-width: 155px; line-height: 1.15; }
   .header-cta { font-size: .68rem; }
-  .hero { padding-left: 1rem; padding-right: 1rem; padding-bottom: 3rem; }
+  .hero { padding-left: 1rem; padding-right: 1rem; padding-bottom: 3rem; row-gap: 2rem; }
   h1 { font-size: clamp(3.35rem, 17vw, 5.4rem); }
   .hero-intro { font-size: .96rem; }
   .hero-actions { flex-direction: column; }
