@@ -56,15 +56,22 @@ nav a:hover, .social-links a:hover { color: var(--lime); }
 h1 { margin: 0; font-size: clamp(3.6rem, 9vw, 8.5rem); line-height: .86; letter-spacing: -.07em; font-weight: 600; max-width: 1050px; }
 h1 span { color: var(--lime); }
 .hero-intro { max-width: 680px; color: #b8c9c3; font-size: clamp(1rem, 1.6vw, 1.25rem); line-height: 1.75; margin: 2rem 0; }
-.hero-actions { display: flex; gap: .8rem; flex-wrap: wrap; }
+.hero-actions { display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 1.4rem; min-height: 52px; padding: 0 1.5rem; font: 500 .76rem "DM Mono"; letter-spacing: .03em; transition: transform .2s, background .2s, color .2s; }
 .button:hover { transform: translateY(-3px); }
 .button-primary { background: var(--lime); color: var(--bg); }
 .button-ghost { border: 1px solid var(--line); background: rgba(255,255,255,.02); }
 .button-ghost:hover { border-color: var(--lime); color: var(--lime); }
+.profile-links { min-height: 52px; display: flex; align-items: stretch; border: 1px solid var(--line); background: rgba(255,255,255,.02); }
+.profile-link { display: inline-flex; align-items: center; gap: .55rem; padding: 0 1rem; color: #c8d7d2; font: 500 .7rem "DM Mono"; border-right: 1px solid var(--line); transition: color .2s, background .2s; }
+.profile-link:last-child { border-right: 0; }
+.profile-link:hover { color: var(--lime); background: rgba(184,255,91,.06); }
+.profile-link svg { width: 17px; height: 17px; flex: 0 0 auto; fill: currentColor; }
+.profile-link:focus-visible { outline: 2px solid var(--lime); outline-offset: -3px; }
 
 .hero-proof { grid-column: 1 / -1; align-self: end; display: flex; align-items: center; gap: 1.25rem; color: var(--muted); font: .69rem "DM Mono"; letter-spacing: .04em; position: relative; z-index: 2; }
-.hero-proof strong { color: white; font: 700 1.35rem Arial; letter-spacing: -.06em; }
+.amazon-logo { width: 86px; display: inline-flex; flex-direction: column; align-items: center; color: white; font: 700 1.35rem Arial, sans-serif; letter-spacing: -.06em; line-height: .75; }
+.amazon-logo svg { width: 72px; height: 13px; margin-left: 8px; fill: #ff9900; }
 .proof-divider { width: 1px; height: 20px; background: var(--line); }
 
 .section { max-width: var(--max); margin: 0 auto; padding: clamp(6rem, 11vw, 10rem) 0; }
@@ -171,6 +178,9 @@ footer { max-width: var(--max); margin: auto; padding: 2rem 0; display: flex; ju
   .hero-intro { font-size: .96rem; }
   .hero-actions { flex-direction: column; }
   .button { width: 100%; }
+  .profile-links { width: 100%; }
+  .profile-link { flex: 1; justify-content: center; padding: 0 .65rem; }
+  .profile-link span { white-space: nowrap; }
   .hero-proof { font-size: .6rem; gap: .7rem; }
   .section { margin-left: 1rem; margin-right: 1rem; padding: 6rem 0; }
   .section-heading { grid-template-columns: 1fr; gap: 1.2rem; }
