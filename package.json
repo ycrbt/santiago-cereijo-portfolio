@@ -1,0 +1,10 @@
+{
+  "name": "santiago-cereijo-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build-worker.mjs",
+    "check": "node --check script.js && node --check build-worker.mjs"
+  }
+}
