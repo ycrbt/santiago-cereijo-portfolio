@@ -8,6 +8,7 @@ const assets = [
   "favicon.svg",
   "og-card.svg",
   "Santiago-Cereijo-CV.pdf",
+  "assets",
 ];
 
 await rm(outputDirectory, { recursive: true, force: true });
@@ -15,7 +16,7 @@ await mkdir(outputDirectory, { recursive: true });
 
 await Promise.all(
   assets.map((asset) =>
-    cp(new URL(`./${asset}`, import.meta.url), new URL(asset, outputDirectory)),
+    cp(new URL(`./${asset}`, import.meta.url), new URL(asset, outputDirectory), { recursive: true }),
   ),
 );
 
