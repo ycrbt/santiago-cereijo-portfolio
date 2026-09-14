@@ -90,8 +90,8 @@ h1 span { color: var(--lime); }
 .metric-card-accent:hover { background: #c8ff82; }
 .metric-kicker { color: var(--muted); }
 .metric-card-accent .metric-kicker { color: #38501e; }
-.metric-card strong { margin-top: auto; font-size: clamp(2.7rem, 4.7vw, 4.5rem); letter-spacing: -.07em; font-weight: 500; }
-.metric-card strong span { color: var(--mint); font-size: .55em; }
+.metric-card strong { margin-top: auto; display: flex; align-items: flex-end; gap: .9rem; font-size: clamp(2.7rem, 4.7vw, 4.5rem); line-height: .9; letter-spacing: -.07em; font-weight: 500; }
+.metric-card strong span { max-width: 10rem; padding-bottom: .35rem; color: var(--mint); font-size: .24em; line-height: 1.45; letter-spacing: .09em; }
 .metric-card-accent strong span { color: #46631f; }
 .metric-card p { font-size: .82rem; line-height: 1.6; color: var(--muted); min-height: 84px; }
 .metric-card-accent p { color: #263914; }
